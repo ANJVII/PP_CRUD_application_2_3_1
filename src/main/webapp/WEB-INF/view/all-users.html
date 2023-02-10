@@ -8,7 +8,7 @@
 </head>
 
 <body>
-<h2>All Employees</h2>
+<h2>All Employees (Все работники)</h2>
 <br>
 <table border="1">
     <tr>
@@ -37,6 +37,8 @@
     </th:each>
 </table>
 <br>
-<input type="button" value="Add" onclick="window.location.href = 'addNewUser'"/>
+<form method="get" th:action="@{/addNewUser}">
+    <input type="submit" value="Add">
+</form>
 </body>
 </html>
