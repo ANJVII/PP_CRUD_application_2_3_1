@@ -9,7 +9,7 @@
 <body>
 <h2>Employee Info</h2>
 <br>
-<form th:action="@{/saveUser}" th:object="${user}" method="get">
+<form th:action="@{/saveUser}" th:object="${user}" method="post">
     <label>Name:</label>
     <input th:field="*{name}" type="text" id="name" style=position:absolute;left:8%;/>
     <br><br>

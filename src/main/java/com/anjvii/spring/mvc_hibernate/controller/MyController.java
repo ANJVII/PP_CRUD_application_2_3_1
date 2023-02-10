@@ -32,7 +32,7 @@ public class MyController {
         return "newUser";
     }
 
-    @GetMapping(value = "/saveUser")
+    @RequestMapping(value = "/saveUser")
     public String saveUser(@ModelAttribute("user") User user) {
         userService.saveUser(user);
         return "redirect:/";
@@ -46,13 +46,13 @@ public class MyController {
     }
 
 
-    @GetMapping(value = "/updateUser-{id}")
+    @RequestMapping(value = "/updateUser-{id}")
     public String updateUser(@ModelAttribute("user") User user) {
         userService.updateUser(user);
         return "redirect:/";
     }
 
-    @GetMapping(value = "/deleteUser-{id}")
+    @RequestMapping(value = "/deleteUser-{id}")
     public String deleteUser(@PathVariable("id") int id) {
         userService.deleteUser(id);
         return "redirect:/";
