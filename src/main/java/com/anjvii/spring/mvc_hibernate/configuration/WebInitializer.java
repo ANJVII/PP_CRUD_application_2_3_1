@@ -31,5 +31,6 @@ public class WebInitializer extends AbstractAnnotationConfigDispatcherServletIni
 
     private void registerHiddenFieldFilter(ServletContext servletContext) {
         servletContext.addFilter("hiddenHttpMethodFilter", new HiddenHttpMethodFilter()).addMappingForUrlPatterns(null, true,"/*");
+        servletContext.setRequestCharacterEncoding("UTF-8");
     }
 }
