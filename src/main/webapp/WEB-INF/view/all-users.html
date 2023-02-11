@@ -29,7 +29,7 @@
             </form>
         </td>
         <td>
-            <form style="align-items: center" th:method="DELETE" th:action="@{/deleteUser-{id}(id=${user.getId()})}">
+            <form style="align-items: center" th:method="DELETE" th:action="@{/deleteUser?id={id}(id=${user.getId()})}">
                 <input type="submit" value="Delete"/>
             </form>
         </td>
